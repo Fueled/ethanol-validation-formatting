@@ -1,0 +1,3 @@
+[submodule "Dependencies/EthanolUtilities"]
+	path = Dependencies/EthanolUtilities
+	url = https://github.com/Fueled/ethanol-utilities.git

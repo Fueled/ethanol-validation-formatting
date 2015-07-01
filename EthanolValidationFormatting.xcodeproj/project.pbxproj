@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F473584F1B443D00007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47358441B443D00007688EC /* EthanolValidationFormatting.framework */; };
+		F47358541B443D00007688EC /* EthanolValidationFormattingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358531B443D00007688EC /* EthanolValidationFormattingTests.m */; };
+		F473586A1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F473586B1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */; };
+		F473586C1B443D67007688EC /* ETHCreditCardNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F473586D1B443D67007688EC /* ETHCreditCardNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */; };
+		F473586E1B443D67007688EC /* ETHFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358621B443D67007688EC /* ETHFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F473586F1B443D67007688EC /* ETHFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358631B443D67007688EC /* ETHFormatter.m */; };
+		F47358701B443D67007688EC /* ETHUSAStateValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358641B443D67007688EC /* ETHUSAStateValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47358711B443D67007688EC /* ETHUSAStateValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358651B443D67007688EC /* ETHUSAStateValidator.m */; };
+		F47358721B443D67007688EC /* ETHValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358661B443D67007688EC /* ETHValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47358731B443D67007688EC /* ETHValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358671B443D67007688EC /* ETHValidator.m */; };
+		F47358741B443D67007688EC /* NSString+EthanolValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358681B443D67007688EC /* NSString+EthanolValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47358751B443D67007688EC /* NSString+EthanolValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358691B443D67007688EC /* NSString+EthanolValidation.m */; };
+		F47358A21B443F13007688EC /* NSString+CreditCard.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358A01B443F13007688EC /* NSString+CreditCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47358A31B443F13007688EC /* NSString+CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358A11B443F13007688EC /* NSString+CreditCard.m */; };
+		F47358A61B443F8C007688EC /* ETHNonemptyValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358A41B443F8C007688EC /* ETHNonemptyValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47358A71B443F8C007688EC /* ETHNonemptyValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358A51B443F8C007688EC /* ETHNonemptyValidator.m */; };
+		F47358B81B444714007688EC /* EthanolValidationFormatting.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358471B443D00007688EC /* EthanolValidationFormatting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F473597A1B45BEF0007688EC /* ETHBlockValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F47359781B45BEF0007688EC /* ETHBlockValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F473597B1B45BEF0007688EC /* ETHBlockValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F47359791B45BEF0007688EC /* ETHBlockValidator.m */; };
+		F473597E1B45BEFB007688EC /* ETHSelectorValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F473597F1B45BEFB007688EC /* ETHSelectorValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F47358501B443D00007688EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F473583B1B443D00007688EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F47358431B443D00007688EC;
+			remoteInfo = EthanolValidationFormatting;
+		};
+		F47358B11B4446E9007688EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47358AC1B4446E9007688EC /* EthanolUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4C14DF91B43294C003D1286;
+			remoteInfo = EthanolUtilities;
+		};
+		F47358B31B4446E9007688EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47358AC1B4446E9007688EC /* EthanolUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4C14E031B43294C003D1286;
+			remoteInfo = EthanolUtilitiesTests;
+		};
+		F47358B51B4446EF007688EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47358AC1B4446E9007688EC /* EthanolUtilities.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F4C14DF81B43294C003D1286;
+			remoteInfo = EthanolUtilities;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F47358441B443D00007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47358471B443D00007688EC /* EthanolValidationFormatting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EthanolValidationFormatting.h; sourceTree = "<group>"; };
+		F47358491B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F473584E1B443D00007688EC /* EthanolValidationFormattingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolValidationFormattingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47358531B443D00007688EC /* EthanolValidationFormattingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EthanolValidationFormattingTests.m; sourceTree = "<group>"; };
+		F47358551B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardExpirationDateFormatter.h; sourceTree = "<group>"; };
+		F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardExpirationDateFormatter.m; sourceTree = "<group>"; };
+		F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardNumberFormatter.h; sourceTree = "<group>"; };
+		F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardNumberFormatter.m; sourceTree = "<group>"; };
+		F47358621B443D67007688EC /* ETHFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHFormatter.h; sourceTree = "<group>"; };
+		F47358631B443D67007688EC /* ETHFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHFormatter.m; sourceTree = "<group>"; };
+		F47358641B443D67007688EC /* ETHUSAStateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHUSAStateValidator.h; sourceTree = "<group>"; };
+		F47358651B443D67007688EC /* ETHUSAStateValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHUSAStateValidator.m; sourceTree = "<group>"; };
+		F47358661B443D67007688EC /* ETHValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHValidator.h; sourceTree = "<group>"; };
+		F47358671B443D67007688EC /* ETHValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHValidator.m; sourceTree = "<group>"; };
+		F47358681B443D67007688EC /* NSString+EthanolValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EthanolValidation.h"; sourceTree = "<group>"; };
+		F47358691B443D67007688EC /* NSString+EthanolValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EthanolValidation.m"; sourceTree = "<group>"; };
+		F47358A01B443F13007688EC /* NSString+CreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CreditCard.h"; sourceTree = "<group>"; };
+		F47358A11B443F13007688EC /* NSString+CreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CreditCard.m"; sourceTree = "<group>"; };
+		F47358A41B443F8C007688EC /* ETHNonemptyValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHNonemptyValidator.h; sourceTree = "<group>"; };
+		F47358A51B443F8C007688EC /* ETHNonemptyValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHNonemptyValidator.m; sourceTree = "<group>"; };
+		F47358AC1B4446E9007688EC /* EthanolUtilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EthanolUtilities.xcodeproj; path = Dependencies/EthanolUtilities/EthanolUtilities.xcodeproj; sourceTree = "<group>"; };
+		F47359781B45BEF0007688EC /* ETHBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHBlockValidator.h; sourceTree = "<group>"; };
+		F47359791B45BEF0007688EC /* ETHBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHBlockValidator.m; sourceTree = "<group>"; };
+		F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHSelectorValidator.h; sourceTree = "<group>"; };
+		F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHSelectorValidator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F47358401B443D00007688EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F473584B1B443D00007688EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F473584F1B443D00007688EC /* EthanolValidationFormatting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F473583A1B443D00007688EC = {
+			isa = PBXGroup;
+			children = (
+				F47358461B443D00007688EC /* EthanolValidationFormatting */,
+				F47358521B443D00007688EC /* EthanolValidationFormattingTests */,
+				F47358A81B44409F007688EC /* Dependencies */,
+				F47358451B443D00007688EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F47358451B443D00007688EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F47358441B443D00007688EC /* EthanolValidationFormatting.framework */,
+				F473584E1B443D00007688EC /* EthanolValidationFormattingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F47358461B443D00007688EC /* EthanolValidationFormatting */ = {
+			isa = PBXGroup;
+			children = (
+				F47358471B443D00007688EC /* EthanolValidationFormatting.h */,
+				F473589C1B443EC5007688EC /* Formatters */,
+				F473589E1B443ED8007688EC /* Validators */,
+				F473589F1B443EDC007688EC /* NSStringHelpers */,
+				F47358491B443D00007688EC /* Info.plist */,
+			);
+			path = EthanolValidationFormatting;
+			sourceTree = "<group>";
+		};
+		F47358521B443D00007688EC /* EthanolValidationFormattingTests */ = {
+			isa = PBXGroup;
+			children = (
+				F47358531B443D00007688EC /* EthanolValidationFormattingTests.m */,
+				F47358551B443D00007688EC /* Info.plist */,
+			);
+			path = EthanolValidationFormattingTests;
+			sourceTree = "<group>";
+		};
+		F473589C1B443EC5007688EC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				F47358621B443D67007688EC /* ETHFormatter.h */,
+				F47358631B443D67007688EC /* ETHFormatter.m */,
+				F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */,
+				F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */,
+				F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */,
+				F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
+		F473589E1B443ED8007688EC /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				F47358661B443D67007688EC /* ETHValidator.h */,
+				F47358671B443D67007688EC /* ETHValidator.m */,
+				F47359781B45BEF0007688EC /* ETHBlockValidator.h */,
+				F47359791B45BEF0007688EC /* ETHBlockValidator.m */,
+				F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */,
+				F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */,
+				F47358A41B443F8C007688EC /* ETHNonemptyValidator.h */,
+				F47358A51B443F8C007688EC /* ETHNonemptyValidator.m */,
+				F47358641B443D67007688EC /* ETHUSAStateValidator.h */,
+				F47358651B443D67007688EC /* ETHUSAStateValidator.m */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		F473589F1B443EDC007688EC /* NSStringHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F47358681B443D67007688EC /* NSString+EthanolValidation.h */,
+				F47358691B443D67007688EC /* NSString+EthanolValidation.m */,
+				F47358A01B443F13007688EC /* NSString+CreditCard.h */,
+				F47358A11B443F13007688EC /* NSString+CreditCard.m */,
+			);
+			name = NSStringHelpers;
+			sourceTree = "<group>";
+		};
+		F47358A81B44409F007688EC /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F47358AC1B4446E9007688EC /* EthanolUtilities.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		F47358AD1B4446E9007688EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F47358B21B4446E9007688EC /* EthanolUtilities.framework */,
+				F47358B41B4446E9007688EC /* EthanolUtilitiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F47358411B443D00007688EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47358B81B444714007688EC /* EthanolValidationFormatting.h in Headers */,
+				F473597A1B45BEF0007688EC /* ETHBlockValidator.h in Headers */,
+				F47358A61B443F8C007688EC /* ETHNonemptyValidator.h in Headers */,
+				F47358721B443D67007688EC /* ETHValidator.h in Headers */,
+				F473586E1B443D67007688EC /* ETHFormatter.h in Headers */,
+				F47358A21B443F13007688EC /* NSString+CreditCard.h in Headers */,
+				F47358701B443D67007688EC /* ETHUSAStateValidator.h in Headers */,
+				F473597E1B45BEFB007688EC /* ETHSelectorValidator.h in Headers */,
+				F47358741B443D67007688EC /* NSString+EthanolValidation.h in Headers */,
+				F473586C1B443D67007688EC /* ETHCreditCardNumberFormatter.h in Headers */,
+				F473586A1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F47358431B443D00007688EC /* EthanolValidationFormatting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47358581B443D00007688EC /* Build configuration list for PBXNativeTarget "EthanolValidationFormatting" */;
+			buildPhases = (
+				F473583F1B443D00007688EC /* Sources */,
+				F47358401B443D00007688EC /* Frameworks */,
+				F47358411B443D00007688EC /* Headers */,
+				F47358421B443D00007688EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F47358B61B4446EF007688EC /* PBXTargetDependency */,
+			);
+			name = EthanolValidationFormatting;
+			productName = EthanolValidationFormatting;
+			productReference = F47358441B443D00007688EC /* EthanolValidationFormatting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F473584D1B443D00007688EC /* EthanolValidationFormattingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F473585B1B443D00007688EC /* Build configuration list for PBXNativeTarget "EthanolValidationFormattingTests" */;
+			buildPhases = (
+				F473584A1B443D00007688EC /* Sources */,
+				F473584B1B443D00007688EC /* Frameworks */,
+				F473584C1B443D00007688EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F47358511B443D00007688EC /* PBXTargetDependency */,
+			);
+			name = EthanolValidationFormattingTests;
+			productName = EthanolValidationFormattingTests;
+			productReference = F473584E1B443D00007688EC /* EthanolValidationFormattingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F473583B1B443D00007688EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Stephane Copin";
+				TargetAttributes = {
+					F47358431B443D00007688EC = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					F473584D1B443D00007688EC = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = F473583E1B443D00007688EC /* Build configuration list for PBXProject "EthanolValidationFormatting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F473583A1B443D00007688EC;
+			productRefGroup = F47358451B443D00007688EC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F47358AD1B4446E9007688EC /* Products */;
+					ProjectRef = F47358AC1B4446E9007688EC /* EthanolUtilities.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F47358431B443D00007688EC /* EthanolValidationFormatting */,
+				F473584D1B443D00007688EC /* EthanolValidationFormattingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F47358B21B4446E9007688EC /* EthanolUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EthanolUtilities.framework;
+			remoteRef = F47358B11B4446E9007688EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F47358B41B4446E9007688EC /* EthanolUtilitiesTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EthanolUtilitiesTests.xctest;
+			remoteRef = F47358B31B4446E9007688EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F47358421B443D00007688EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F473584C1B443D00007688EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F473583F1B443D00007688EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47358A31B443F13007688EC /* NSString+CreditCard.m in Sources */,
+				F47358751B443D67007688EC /* NSString+EthanolValidation.m in Sources */,
+				F473597B1B45BEF0007688EC /* ETHBlockValidator.m in Sources */,
+				F47358A71B443F8C007688EC /* ETHNonemptyValidator.m in Sources */,
+				F473586D1B443D67007688EC /* ETHCreditCardNumberFormatter.m in Sources */,
+				F473586F1B443D67007688EC /* ETHFormatter.m in Sources */,
+				F47358711B443D67007688EC /* ETHUSAStateValidator.m in Sources */,
+				F473597F1B45BEFB007688EC /* ETHSelectorValidator.m in Sources */,
+				F473586B1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m in Sources */,
+				F47358731B443D67007688EC /* ETHValidator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F473584A1B443D00007688EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47358541B443D00007688EC /* EthanolValidationFormattingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F47358511B443D00007688EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F47358431B443D00007688EC /* EthanolValidationFormatting */;
+			targetProxy = F47358501B443D00007688EC /* PBXContainerItemProxy */;
+		};
+		F47358B61B4446EF007688EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EthanolUtilities;
+			targetProxy = F47358B51B4446EF007688EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F47358561B443D00007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F47358571B443D00007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F47358591B443D00007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EthanolValidationFormatting/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolValidationFormatting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F473585A1B443D00007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EthanolValidationFormatting/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolValidationFormatting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F473585C1B443D00007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EthanolValidationFormattingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolValidationFormattingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F473585D1B443D00007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EthanolValidationFormattingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolValidationFormattingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F473583E1B443D00007688EC /* Build configuration list for PBXProject "EthanolValidationFormatting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47358561B443D00007688EC /* Debug */,
+				F47358571B443D00007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47358581B443D00007688EC /* Build configuration list for PBXNativeTarget "EthanolValidationFormatting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47358591B443D00007688EC /* Debug */,
+				F473585A1B443D00007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F473585B1B443D00007688EC /* Build configuration list for PBXNativeTarget "EthanolValidationFormattingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F473585C1B443D00007688EC /* Debug */,
+				F473585D1B443D00007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F473583B1B443D00007688EC /* Project object */;
+}
