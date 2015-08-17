@@ -8,43 +8,34 @@
 
 #import "NSString+CreditCard.h"
 
+@import EthanolUtilities;
+
 @implementation NSString (CreditCard)
 
 - (ETHCreditCardType)eth_creditCardType {
-  NSString *formattedString = [self formatStringForProcessing:self];
-  if (formattedString == nil || formattedString.length < 9) {
-    return ETHCreditCardTypeUnknown;
+  NSString *formattedString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  NSArray * characters = [self componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  if(characters.count != 1 || formattedString.length < 9 || formattedString.length > 19) {
+    return ETHCreditCardTypeNotACreditCard;
   }
   
-  NSArray *enums = @[@(ETHCreditCardTypeAmex),
-                     @(ETHCreditCardTypeVisa),
-                     @(ETHCreditCardTypeMastercard),
-                     @(ETHCreditCardTypeDiscover)];
-  
-  __block ETHCreditCardType type = ETHCreditCardTypeUnknown;
-  [enums enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-    ETHCreditCardType _type = [obj integerValue];
-    NSPredicate *predicate = [self predicateForType:_type];
+  ETHCreditCardType cardType[] = {ETHCreditCardTypeAmex, ETHCreditCardTypeVisa, ETHCreditCardTypeMastercard, ETHCreditCardTypeDiscover};
+  for(size_t i = 0;i < sizeof(cardType) / sizeof(*cardType);++i) {
+    NSPredicate *predicate = [self predicateForType:cardType[i]];
     BOOL isCurrentType = [predicate evaluateWithObject:formattedString];
-    if (isCurrentType) {
-      type = _type;
-      *stop = YES;
+    if(isCurrentType) {
+      return cardType[i];
     }
-  }];
+  }
   
-  return type;
-}
-
-- (NSString *)formatStringForProcessing:(NSString *)string {
-  NSCharacterSet *illegalCharacters = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-  NSArray *components = [string componentsSeparatedByCharactersInSet:illegalCharacters];
-  return [components componentsJoinedByString:@""];
+  return ETHCreditCardTypeUnknown;
 }
 
 - (NSPredicate *)predicateForType:(ETHCreditCardType)type {
-  if (type == ETHCreditCardTypeUnknown) {
+  if (type == ETHCreditCardTypeUnknown || type == ETHCreditCardTypeNotACreditCard) {
     return nil;
   }
+  
   NSString *regex = nil;
   switch (type) {
     case ETHCreditCardTypeAmex:

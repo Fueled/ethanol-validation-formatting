@@ -44,7 +44,7 @@ static NSInteger const kSeparatorCharacterRank = 2;
 
 - (id)unformatString:(NSString *)formattedString preserveCursor:(NSInteger *)cursor {
   return [formattedString eth_stringByRemovingCharacters:({ NSMutableCharacterSet * set = [NSMutableCharacterSet whitespaceAndNewlineCharacterSet]; [set formUnionWithCharacterSet: [NSCharacterSet characterSetWithCharactersInString:kSeparatorCharacter]]; set; })
-                                              preserveCursor:cursor];
+                                          preserveCursor:cursor];
 }
 
 @end

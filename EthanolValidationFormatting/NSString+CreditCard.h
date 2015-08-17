@@ -8,12 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Define the types of credit card that the property below can detect
+ */
 typedef NS_ENUM(NSInteger, ETHCreditCardType) {
+  /**
+   *  An unknown credit card type (Any sequence of number between 6 and 19 characters that doesn't fit the others)
+   */
+  ETHCreditCardTypeUnknown,
+  /**
+   *  American Express
+   */
   ETHCreditCardTypeAmex,
+  /**
+   *  Visa
+   */
   ETHCreditCardTypeVisa,
+  /**
+   *  Master Card
+   */
   ETHCreditCardTypeMastercard,
+  /**
+   *  Discover
+   */
   ETHCreditCardTypeDiscover,
-  ETHCreditCardTypeUnknown
+  /**
+   *  Anything that is not a sequence of number, or that is lesser than 6 characters/greater than 19 characters
+   */
+  ETHCreditCardTypeNotACreditCard
 };
 
 @interface NSString (CreditCard)
