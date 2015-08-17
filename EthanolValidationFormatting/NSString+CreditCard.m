@@ -16,7 +16,7 @@
 	NSString *formattedString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	NSArray * characters = [self componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
 	if(characters.count != 1 || formattedString.length < 9 || formattedString.length > 19) {
-		return ETHCreditCardTypeANotCreditCard;
+		return ETHCreditCardTypeNotACreditCard;
 	}
 	
 	ETHCreditCardType cardType[] = {ETHCreditCardTypeAmex, ETHCreditCardTypeVisa, ETHCreditCardTypeMastercard, ETHCreditCardTypeDiscover};
@@ -32,7 +32,7 @@
 }
 
 - (NSPredicate *)predicateForType:(ETHCreditCardType)type {
-  if (type == ETHCreditCardTypeUnknown || type == ETHCreditCardTypeANotCreditCard) {
+  if (type == ETHCreditCardTypeUnknown || type == ETHCreditCardTypeNotACreditCard) {
     return nil;
   }
 	

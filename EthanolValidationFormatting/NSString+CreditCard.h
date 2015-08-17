@@ -14,7 +14,7 @@ typedef NS_ENUM(NSInteger, ETHCreditCardType) {
   ETHCreditCardTypeVisa,
   ETHCreditCardTypeMastercard,
   ETHCreditCardTypeDiscover,
-	ETHCreditCardTypeANotCreditCard
+	ETHCreditCardTypeNotACreditCard
 };
 
 @interface NSString (CreditCard)

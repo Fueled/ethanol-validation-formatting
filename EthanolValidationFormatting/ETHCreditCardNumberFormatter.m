@@ -43,7 +43,7 @@ enum {
         *cursor += (*cursor > 4) ? 1 : 0;
         *cursor += (*cursor > 10) ? 1 : 0;
         break;
-			case ETHCreditCardTypeANotCreditCard:
+			case ETHCreditCardTypeNotACreditCard:
 				result = object;
 				break;
       default:
