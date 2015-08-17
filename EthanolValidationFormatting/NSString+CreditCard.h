@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, ETHCreditCardType) {
-	ETHCreditCardTypeUnknown,
+  ETHCreditCardTypeUnknown,
   ETHCreditCardTypeAmex,
   ETHCreditCardTypeVisa,
   ETHCreditCardTypeMastercard,
   ETHCreditCardTypeDiscover,
-	ETHCreditCardTypeNotACreditCard
+  ETHCreditCardTypeNotACreditCard
 };
 
 @interface NSString (CreditCard)

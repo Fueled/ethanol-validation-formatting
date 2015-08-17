@@ -68,27 +68,27 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   if(slashIndex.location == NSNotFound) {
     return NO;
   }
-	
+  
   NSString * monthString = [[self substringToIndex:slashIndex.location] eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   if(monthString.length == 0) {
     return NO;
-	}
-	
-	NSArray * monthComponents = [monthString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-	if(monthComponents.count != 1) {
-		return NO;
-	}
+  }
+  
+  NSArray * monthComponents = [monthString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  if(monthComponents.count != 1) {
+    return NO;
+  }
   
   NSString * yearString = [[self substringFromIndex:slashIndex.location + 1] eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   if(yearString.length == 0) {
     return NO;
   }
-	
-	NSArray * yearComponents = [yearString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-	if(yearComponents.count != 1) {
-		return NO;
-	}
-	
+  
+  NSArray * yearComponents = [yearString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  if(yearComponents.count != 1) {
+    return NO;
+  }
+  
   NSDateComponents * components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
   NSUInteger month = [monthString integerValue];
   NSUInteger year = [yearString integerValue];
@@ -105,15 +105,15 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isValidCreditCardNumber {
-	NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   if(digitString.length < 12 || digitString.length > 20) {
     return NO;
-	}
-	
-	NSArray * digitComponents = [digitString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-	if(digitComponents.count != 1) {
-		return NO;
-	}
+  }
+  
+  NSArray * digitComponents = [digitString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  if(digitComponents.count != 1) {
+    return NO;
+  }
   
   NSInteger verification = [NSString eth_luhnAlgorithm:digitString];
   NSRange range = {.location = [digitString length] - 1, .length = 1};
