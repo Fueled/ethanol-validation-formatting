@@ -98,7 +98,7 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   }
   
   if(year == currentYear) {
-    return month >= [components month];
+    return month >= 1 && month <= 12 && month >= [components month];
   }
   
   return ((NSInteger)year) > currentYear;
