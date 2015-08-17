@@ -9,9 +9,11 @@
 #import "NSString+EthanolValidation.h"
 #import "ETHUSAStateValidator.h"
 
-static NSString * const kAlphabeticRegEx = @"[a-zA-Z\\s]+";
-static NSString * const kAlphaNumericRegEx = @"[a-zA-Z0-9\\s]+";
-static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+@import EthanolUtilities;
+
+static NSString * const kAlphabeticRegex = @"[a-zA-Z\\s]+";
+static NSString * const kAlphaNumericRegex = @"[a-zA-Z0-9\\s]+";
+static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
 @implementation NSString (EthanolValidation)
 
@@ -25,7 +27,7 @@ static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isAlphabetic {
-  return [self eth_matchRegex:kAlphabeticRegEx];
+  return [self eth_matchRegex:kAlphabeticRegex];
 }
 
 - (BOOL)eth_isNumeric {
@@ -37,11 +39,11 @@ static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isAlphanumeric {
-  return [self eth_matchRegex:kAlphaNumericRegEx];
+  return [self eth_matchRegex:kAlphaNumericRegex];
 }
 
 - (BOOL)eth_isValidEmail {
-  return [self eth_matchRegex:kEmailRegEx];
+  return [self eth_matchRegex:kEmailRegex];
 }
 
 - (BOOL)eth_isValidURL {
@@ -66,16 +68,27 @@ static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   if(slashIndex.location == NSNotFound) {
     return NO;
   }
-  NSString * monthString = [NSString eth_extractDigitsFromString:[self substringToIndex:slashIndex.location]];
+	
+  NSString * monthString = [[self substringToIndex:slashIndex.location] eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   if(monthString.length == 0) {
     return NO;
-  }
+	}
+	
+	NSArray * monthComponents = [monthString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+	if(monthComponents.count != 1) {
+		return NO;
+	}
   
-  NSString * yearString = [NSString eth_extractDigitsFromString:[self substringFromIndex:slashIndex.location + 1]];
+  NSString * yearString = [[self substringFromIndex:slashIndex.location + 1] eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   if(yearString.length == 0) {
     return NO;
   }
-  
+	
+	NSArray * yearComponents = [yearString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+	if(yearComponents.count != 1) {
+		return NO;
+	}
+	
   NSDateComponents * components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
   NSUInteger month = [monthString integerValue];
   NSUInteger year = [yearString integerValue];
@@ -92,10 +105,15 @@ static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isValidCreditCardNumber {
-  NSString * digitString = [NSString eth_extractDigitsFromString:self];
+	NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   if(digitString.length < 12 || digitString.length > 20) {
     return NO;
-  }
+	}
+	
+	NSArray * digitComponents = [digitString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+	if(digitComponents.count != 1) {
+		return NO;
+	}
   
   NSInteger verification = [NSString eth_luhnAlgorithm:digitString];
   NSRange range = {.location = [digitString length] - 1, .length = 1};
@@ -106,7 +124,7 @@ static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isValidCardVerificationCode {
-  NSString * digitString = [NSString eth_extractDigitsFromString:self];
+  NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   NSInteger digitStringLength = [digitString length];
   if([self length] == digitStringLength && (digitStringLength == 3 || digitStringLength == 4)) {
     return YES;
@@ -148,24 +166,6 @@ static NSString * const kEmailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   }
   
   return (10 - (sum % 10)) % 10;
-}
-
-+ (NSString *)eth_extractDigitsFromString:(NSString *)string {
-  NSMutableString *strippedString = [NSMutableString stringWithCapacity:string.length];
-  NSScanner *scanner = [NSScanner scannerWithString:string];
-  NSCharacterSet *numbers = [NSCharacterSet
-                             characterSetWithCharactersInString:@"0123456789"];
-  
-  while ([scanner isAtEnd] == NO) {
-    NSString *buffer;
-    if ([scanner scanCharactersFromSet:numbers intoString:&buffer]) {
-      [strippedString appendString:buffer];
-    } else {
-      [scanner setScanLocation:([scanner scanLocation] + 1)];
-    }
-  }
-  
-  return strippedString;
 }
 
 @end

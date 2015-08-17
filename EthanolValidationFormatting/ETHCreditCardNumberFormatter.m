@@ -28,8 +28,7 @@ enum {
     NSRange range = {.location = 0, .length =  length};
     [object getCharacters:buffer range:range];
     NSMutableString *result = [NSMutableString string];
-    
-    
+		
     switch ([object eth_creditCardType]) {
         // masking and length is different for the amex type.
       case ETHCreditCardTypeAmex:
@@ -44,7 +43,9 @@ enum {
         *cursor += (*cursor > 4) ? 1 : 0;
         *cursor += (*cursor > 10) ? 1 : 0;
         break;
-        
+			case ETHCreditCardTypeANotCreditCard:
+				result = object;
+				break;
       default:
         for (NSUInteger i = 0; i < length; ++i) {
           if (i > 0 && (i % 4) == 0 && i < ETHCreditCardNumberDefaultLength) {
