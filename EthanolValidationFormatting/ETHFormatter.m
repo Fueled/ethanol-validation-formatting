@@ -24,15 +24,8 @@
   return [self formatObject:object preserveCursor:&temp changeInCharacterOffset:0];
 }
 
-- (NSString *)formatObject:(id)object preserveCursor:(NSInteger *)cursor deleting:(BOOL)deleting {
-  return [self formatObject:object preserveCursor:cursor changeInCharacterOffset:deleting ? -1 : 1];
-}
-
 - (NSString *)formatObject:(id)object preserveCursor:(NSInteger *)cursor changeInCharacterOffset:(NSInteger)characterOffset {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-  return [self formatObject:object preserveCursor:cursor deleting:characterOffset <= 0];
-#pragma clang diagnostic pop
+  return nil;
 }
 
 - (id)unformatString:(NSString *)formattedString {

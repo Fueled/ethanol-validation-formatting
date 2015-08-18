@@ -31,6 +31,7 @@
 		F473597E1B45BEFB007688EC /* ETHSelectorValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F473597F1B45BEFB007688EC /* ETHSelectorValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */; };
 		F4C275501B83AE4A00838B17 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C2754F1B83AE4A00838B17 /* EthanolUtilities.framework */; };
+		F4C275611B83CD9400838B17 /* CreditCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275601B83CD9400838B17 /* CreditCardTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHSelectorValidator.h; sourceTree = "<group>"; };
 		F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHSelectorValidator.m; sourceTree = "<group>"; };
 		F4C2754F1B83AE4A00838B17 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C275601B83CD9400838B17 /* CreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F47358531B443D00007688EC /* FormattersTests.m */,
+				F4C275601B83CD9400838B17 /* CreditCardTests.m */,
 				F47358551B443D00007688EC /* Info.plist */,
 			);
 			path = EthanolValidationFormattingTests;
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C275611B83CD9400838B17 /* CreditCardTests.m in Sources */,
 				F47358541B443D00007688EC /* FormattersTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

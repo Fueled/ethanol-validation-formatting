@@ -35,19 +35,6 @@
 
 /**
  *  Format the given object to a NSString * representation, while preserving cursor position if cursor is not NULL.
- *  This method, if a cursor is given, will move the cursor adequately whether it's a delete operation or not (Specified by deleting)
- *  @note This is the same as calling [self formatObject:object preserveCursor:cursor changeInCharacterOffset:deleting ? -1 : 1]
- *
- *  @param object   The object to format to a NSString.
- *  @param cursor   A pointer to a NSInteger containing the current cursor position. This parameter must not be NULL.
- *  @param deleting A BOOL specifying whether or not the formatting operation is done because of deleting a character or not.
- *
- *  @return The formatted object as a NSString.
- */
-- (NSString *)formatObject:(id)object preserveCursor:(NSInteger *)cursor deleting:(BOOL)deleting __deprecated_msg("Please use formatObject:preserveCursor:changeInCharacterOffset instead.");
-
-/**
- *  Format the given object to a NSString * representation, while preserving cursor position if cursor is not NULL.
  *  This method, if a cursor is given, will move the cursor adequately compared
  *
  *  @param object          The object to format to a NSString.
