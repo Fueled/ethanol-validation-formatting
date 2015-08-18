@@ -7,7 +7,8 @@
 //
 
 #import "ETHCreditCardExpirationDateFormatter.h"
-#import <EthanolUtilities/NSString+EthanolUtils.h>
+
+@import EthanolUtilities;
 
 static NSString * const kSeparatorCharacter = @"/";
 static NSInteger const kSeparatorCharacterRank = 2;

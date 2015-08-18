@@ -8,7 +8,8 @@
 
 #import "ETHCreditCardNumberFormatter.h"
 #import "NSString+CreditCard.h"
-#import <EthanolUtilities/NSString+EthanolUtils.h>
+
+@import EthanolUtilities;
 
 enum {
   ETHCreditCardNumberDefaultLength = 16,
