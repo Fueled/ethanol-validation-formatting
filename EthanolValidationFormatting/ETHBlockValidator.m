@@ -34,7 +34,7 @@
     if(error != nil) {
       *error = [NSError errorWithDomain:@"com.Ethanol.ValidationFormatting"
                                    code:ETHValidatorErrorCode
-                               userInfo:nil];
+                               userInfo:@{NSLocalizedDescriptionKey: errorMessage}];
     }
     
     return NO;

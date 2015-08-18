@@ -41,12 +41,6 @@
 }
 
 - (BOOL)validateObject:(id)object error:(NSError **)error {
-  if(error != nil) {
-    *error = [NSError errorWithDomain:@"com.Ethanol.ValidationFormatting"
-                                 code:ETHValidatorErrorCode
-                             userInfo:nil];
-  }
-  
   id target = self.target ?: object;
   
   NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[target class] instanceMethodSignatureForSelector:self.selector]];
@@ -59,6 +53,12 @@
   
   BOOL returnValue;
   [invocation getReturnValue:&returnValue];
+  
+  if(!returnValue && error != nil) {
+    *error = [NSError errorWithDomain:@"com.Ethanol.ValidationFormatting"
+                                 code:ETHValidatorErrorCode
+                             userInfo:@{NSLocalizedDescriptionKey: self.error}];
+  }
   
   return returnValue;
 }

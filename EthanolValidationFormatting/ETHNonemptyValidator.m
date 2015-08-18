@@ -14,7 +14,9 @@
 - (BOOL)validateObject:(id)object error:(NSError **)error {
   void (^ setError)(void) = ^ {
     if(error != nil) {
-      *error = [NSError errorWithDomain:@"com.Ethanol.ValidationFormatting" code:ETHValidatorErrorCode userInfo:nil];
+      *error = [NSError errorWithDomain:@"com.Ethanol.ValidationFormatting"
+                                   code:ETHValidatorErrorCode
+                               userInfo:nil];
     }
   };
   
