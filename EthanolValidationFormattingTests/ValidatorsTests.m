@@ -30,6 +30,11 @@
   [super tearDown];
 }
 
+- (void)testBaseValidatorAlwaysFails
+{
+  XCTAssertFalse([[ETHValidator validator] validateObject:nil error:nil], @"This test must return NO");
+}
+
 - (void)testNilNonemptyValidator
 {
   NSError * error;
@@ -74,21 +79,21 @@
 {
   NSString * object = nil;
   NSError * error;
-  XCTAssertTrue(![[ETHUSAStateValidator validator] validateObject:object error:&error] && error != nil, @"ETHUSAStateValidator validating nil should return NO and set an error");
+  XCTAssertFalse([[ETHUSAStateValidator validator] validateObject:object error:&error] && error != nil, @"ETHUSAStateValidator validating nil should return NO and set an error");
 }
 
 - (void)testInvalidUSAStateValidator
 {
   NSString * object = @"DEFINITELY NOT A STATE";
   NSError * error;
-  XCTAssertTrue(![[ETHUSAStateValidator validator] validateObject:object error:&error] && error != nil, @"ETHUSAStateValidator validating '%@' should return NO and set an error", object);
+  XCTAssertFalse([[ETHUSAStateValidator validator] validateObject:object error:&error] && error != nil, @"ETHUSAStateValidator validating '%@' should return NO and set an error", object);
 }
 
 - (void)testNonStringUSAStateValidator
 {
   NSObject * object = [[NSObject alloc] init];
   NSError * error;
-  XCTAssertTrue(![[ETHUSAStateValidator validator] validateObject:object error:&error] && error != nil, @"ETHUSAStateValidator validating '%@' should return NO and set an error", object);
+  XCTAssertFalse([[ETHUSAStateValidator validator] validateObject:object error:&error] && error != nil, @"ETHUSAStateValidator validating '%@' should return NO and set an error", object);
 }
 
 - (void)testSelectorValidator
@@ -106,24 +111,44 @@
   XCTAssertTrue(![[ETHSelectorValidator validatorWithSelector:@selector(isEqualToString:) target:@"test2" error:errorMessage] validateObject:object error:&error] && error != nil && [[error localizedDescription] isEqualToString:errorMessage], @"This test should return YES");
 }
 
-- (void)testThrowSelectorValidator
+- (void)testNoThrowSelectorValidator
 {
   NSError * error;
   XCTAssertNoThrow([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"Shoulnd't be set"] validateObject:@"asd" error:&error], @"This test must not throw because the selector eth_isValidEmail is part of the Ethanol category on NSString");
 }
 
-- (void)testBlockValidator
+- (void)testThrowSelectorValidator
+{
+  NSError * error;
+  XCTAssertThrows([[ETHSelectorValidator validatorWithSelector:NSSelectorFromString(@"abc") error:@"Can't be set"] validateObject:@"asd" error:&error], @"This test must throw because the selector abc doesn't exist");
+}
+
+- (void)testBlockValidatorError
 {
   NSString * objectToValidate = @"validate me";
   NSError * error;
   NSString * errorMessageToCheck = @"error message";
-  XCTAssertTrue(![[ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
+  XCTAssertFalse([[ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
     if([object isEqualToString:objectToValidate]) {
       *errorMessage = errorMessageToCheck;
       return NO;
     }
     return YES;
   }] validateObject:objectToValidate error:&error] && [[error localizedDescription] isEqualToString:errorMessageToCheck], @"This test must return YES");
+}
+
+- (void)testBlockValidatorNoError
+{
+  NSString * objectToValidate = @"validate me";
+  NSError * error;
+  NSString * errorMessageToCheck = @"error message";
+  XCTAssertTrue([[ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
+    if(![object isEqualToString:objectToValidate]) {
+      *errorMessage = errorMessageToCheck;
+      return NO;
+    }
+    return YES;
+  }] validateObject:objectToValidate error:&error], @"This test must return YES");
 }
 
 @end
