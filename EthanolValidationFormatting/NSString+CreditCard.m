@@ -32,10 +32,10 @@
 }
 
 - (NSPredicate *)predicateForType:(ETHCreditCardType)type {
-  if (type == ETHCreditCardTypeUnknown || type == ETHCreditCardTypeNotACreditCard) {
-    return nil;
-  }
+  NSAssert(type == ETHCreditCardTypeAmex || type == ETHCreditCardTypeDiscover || type == ETHCreditCardTypeMastercard || type == ETHCreditCardTypeVisa, @"Unexpected type given");
   
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wswitch"
   NSString *regex = nil;
   switch (type) {
     case ETHCreditCardTypeAmex:
@@ -50,9 +50,9 @@
     case ETHCreditCardTypeVisa:
       regex = @"^4[0-9]{6,}$";
       break;
-    default:
-      break;
   }
+#pragma clang diagnostic pop
+  
   return [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
 }
 

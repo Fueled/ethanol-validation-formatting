@@ -31,7 +31,7 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isNumeric {
-  if (nil == self || [self length] == 0) {
+  if (self.length == 0) {
     return NO;
   }
   NSCharacterSet *notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
@@ -91,6 +91,10 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   
   NSDateComponents * components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
   NSUInteger month = [monthString integerValue];
+  if(month < 1 || month > 12) {
+    return NO;
+  }
+  
   NSUInteger year = [yearString integerValue];
   NSInteger currentYear = [components year];
   if(yearString.length <= 2) {
@@ -98,7 +102,7 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   }
   
   if(year == currentYear) {
-    return month >= 1 && month <= 12 && month >= [components month];
+    return month >= [components month];
   }
   
   return ((NSInteger)year) > currentYear;
@@ -127,6 +131,11 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
   NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   NSInteger digitStringLength = [digitString length];
   if([self length] == digitStringLength && (digitStringLength == 3 || digitStringLength == 4)) {
+    NSArray * digitComponents = [digitString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+    if(digitComponents.count != 1) {
+      return NO;
+    }
+    
     return YES;
   }
   

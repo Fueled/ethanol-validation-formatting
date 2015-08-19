@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F473584F1B443D00007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47358441B443D00007688EC /* EthanolValidationFormatting.framework */; };
-		F47358541B443D00007688EC /* EthanolValidationFormattingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358531B443D00007688EC /* EthanolValidationFormattingTests.m */; };
+		F47358541B443D00007688EC /* FormattersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358531B443D00007688EC /* FormattersTests.m */; };
 		F473586A1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F473586B1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */; };
 		F473586C1B443D67007688EC /* ETHCreditCardNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +31,9 @@
 		F473597E1B45BEFB007688EC /* ETHSelectorValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F473597F1B45BEFB007688EC /* ETHSelectorValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */; };
 		F4C275501B83AE4A00838B17 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C2754F1B83AE4A00838B17 /* EthanolUtilities.framework */; };
+		F4C275611B83CD9400838B17 /* CreditCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275601B83CD9400838B17 /* CreditCardTests.m */; };
+		F4C275641B83D99100838B17 /* ValidatorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275631B83D99100838B17 /* ValidatorsTests.m */; };
+		F4C275661B83DD1E00838B17 /* NSStringValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,7 @@
 		F47358471B443D00007688EC /* EthanolValidationFormatting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EthanolValidationFormatting.h; sourceTree = "<group>"; };
 		F47358491B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F473584E1B443D00007688EC /* EthanolValidationFormattingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolValidationFormattingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F47358531B443D00007688EC /* EthanolValidationFormattingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EthanolValidationFormattingTests.m; sourceTree = "<group>"; };
+		F47358531B443D00007688EC /* FormattersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormattersTests.m; sourceTree = "<group>"; };
 		F47358551B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardExpirationDateFormatter.h; sourceTree = "<group>"; };
 		F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardExpirationDateFormatter.m; sourceTree = "<group>"; };
@@ -71,6 +74,9 @@
 		F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHSelectorValidator.h; sourceTree = "<group>"; };
 		F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHSelectorValidator.m; sourceTree = "<group>"; };
 		F4C2754F1B83AE4A00838B17 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C275601B83CD9400838B17 /* CreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardTests.m; sourceTree = "<group>"; };
+		F4C275631B83D99100838B17 /* ValidatorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorsTests.m; sourceTree = "<group>"; };
+		F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringValidationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +133,10 @@
 		F47358521B443D00007688EC /* EthanolValidationFormattingTests */ = {
 			isa = PBXGroup;
 			children = (
-				F47358531B443D00007688EC /* EthanolValidationFormattingTests.m */,
+				F47358531B443D00007688EC /* FormattersTests.m */,
+				F4C275601B83CD9400838B17 /* CreditCardTests.m */,
+				F4C275631B83D99100838B17 /* ValidatorsTests.m */,
+				F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */,
 				F47358551B443D00007688EC /* Info.plist */,
 			);
 			path = EthanolValidationFormattingTests;
@@ -316,7 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47358541B443D00007688EC /* EthanolValidationFormattingTests.m in Sources */,
+				F4C275611B83CD9400838B17 /* CreditCardTests.m in Sources */,
+				F47358541B443D00007688EC /* FormattersTests.m in Sources */,
+				F4C275661B83DD1E00838B17 /* NSStringValidationTests.m in Sources */,
+				F4C275641B83D99100838B17 /* ValidatorsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +440,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = EthanolValidationFormatting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -444,6 +457,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = EthanolValidationFormatting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
