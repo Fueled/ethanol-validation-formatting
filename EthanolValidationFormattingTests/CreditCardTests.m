@@ -16,16 +16,6 @@
 
 @implementation CreditCardTests
 
-- (void)setUp {
-  [super setUp];
-  // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-  // Put teardown code here. This method is called after the invocation of each test method in the class.
-  [super tearDown];
-}
-
 #define GENERATE_CREDIT_CARD_NUMBER_TEST(testName, cardNumber, type) \
   - (void)test ## testName ## CreditCardNumber { \
     XCTAssertEqual((cardNumber).eth_creditCardType, type); \
