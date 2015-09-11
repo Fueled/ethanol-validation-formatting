@@ -80,7 +80,7 @@
   XCTAssertEqualObjects([formatter formatObject:@"3714496353"], @"3714 496353");
 }
 
-GENERATE_FORMATTER_TESTS(testCreditCardNumberDefaultFormatter, @"4212456123124978", @"4212 4561 2312 4978",  5,  0, 6,  4, ETHCreditCardNumberFormatter, )
+GENERATE_FORMATTER_TESTS(testCreditCardNumberDefaultFormatter, @"4916401926533", @"4916 4019 2653 3",  5,  0, 6,  4, ETHCreditCardNumberFormatter, )
 GENERATE_FORMATTER_TESTS(testCreditCardNumberAmexFormatter,  @"371449635398431",   @"3714 496353 98431", 13, -6, 8, 11, ETHCreditCardNumberFormatter, )
 
 GENERATE_FORMATTER_TESTS(testCreditCardExpirationDateDefaultNumberFormatter, @"122016", @"12/2016", 4, -3, 1,  3, ETHCreditCardExpirationDateFormatter, )
@@ -90,6 +90,16 @@ GENERATE_FORMATTER_TESTS(testCreditCardExpirationDateDefaultNumberFormatterCurso
   ETHCreditCardExpirationDateFormatter * formatter = [[ETHCreditCardExpirationDateFormatter alloc] init];
   
   XCTAssertNil([formatter formatObject:nil]);
+}
+
+- (void)testNonDestructiveCreditCardNumberUnformat {
+	NSString * testString = @"definitely not a credit card number";
+	XCTAssertEqualObjects([[ETHCreditCardNumberFormatter formatter] unformatString:testString], testString);
+}
+
+- (void)testNonDestructiveCreditCardExpiratinDateUnformat {
+	NSString * testString = @"definitely not a credit card expiration/date";
+	XCTAssertEqualObjects([[ETHCreditCardExpirationDateFormatter formatter] unformatString:testString], testString);
 }
 
 @end
