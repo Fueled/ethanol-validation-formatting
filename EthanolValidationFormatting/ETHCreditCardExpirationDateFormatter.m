@@ -7,6 +7,8 @@
 //
 
 #import "ETHCreditCardExpirationDateFormatter.h"
+#import "NSString+EthanolValidation.h"
+#import "ETHSelectorValidator.h"
 
 @import EthanolUtilities;
 
@@ -44,8 +46,11 @@ static NSInteger const kSeparatorCharacterRank = 2;
 }
 
 - (id)unformatString:(NSString *)formattedString preserveCursor:(NSInteger *)cursor {
-  return [formattedString eth_stringByRemovingCharacters:({ NSMutableCharacterSet * set = [NSMutableCharacterSet whitespaceAndNewlineCharacterSet]; [set formUnionWithCharacterSet: [NSCharacterSet characterSetWithCharactersInString:kSeparatorCharacter]]; set; })
-                                          preserveCursor:cursor];
+	if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardExpirationDate) error:nil] validateObject:formattedString error:nil]) {
+		return [formattedString eth_stringByRemovingCharacters:({ NSMutableCharacterSet * set = [NSMutableCharacterSet whitespaceAndNewlineCharacterSet]; [set formUnionWithCharacterSet: [NSCharacterSet characterSetWithCharactersInString:kSeparatorCharacter]]; set; })
+																					preserveCursor:cursor];
+	}
+	return formattedString;
 }
 
 @end

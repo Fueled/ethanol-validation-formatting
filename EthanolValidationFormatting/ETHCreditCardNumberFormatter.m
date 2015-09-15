@@ -8,6 +8,8 @@
 
 #import "ETHCreditCardNumberFormatter.h"
 #import "NSString+CreditCard.h"
+#import "NSString+EthanolValidation.h"
+#import "ETHSelectorValidator.h"
 
 @import EthanolUtilities;
 
@@ -69,8 +71,11 @@ enum {
 }
 
 - (id)unformatString:(NSString *)formattedString preserveCursor:(NSInteger *)cursor {
-  return [formattedString eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]
-                                          preserveCursor:cursor];
+	if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardNumber) error:nil] validateObject:formattedString error:nil]) {
+		return [formattedString eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]
+																						preserveCursor:cursor];
+	}
+	return formattedString;
 }
 
 @end

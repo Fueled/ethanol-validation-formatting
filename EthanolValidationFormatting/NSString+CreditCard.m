@@ -13,12 +13,12 @@
 @implementation NSString (CreditCard)
 
 - (ETHCreditCardType)eth_creditCardType {
-  NSString *formattedString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  NSString * formattedString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   NSArray * characters = [self componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
   if(characters.count != 1 || formattedString.length < 9 || formattedString.length > 19) {
     return ETHCreditCardTypeNotACreditCard;
   }
-  
+	
   ETHCreditCardType cardType[] = {ETHCreditCardTypeAmex, ETHCreditCardTypeVisa, ETHCreditCardTypeMastercard, ETHCreditCardTypeDiscover};
   for(size_t i = 0;i < sizeof(cardType) / sizeof(*cardType);++i) {
     NSPredicate *predicate = [self predicateForType:cardType[i]];
