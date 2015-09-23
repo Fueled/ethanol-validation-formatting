@@ -110,17 +110,17 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isValidCreditCardNumber {
-	NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-	if(digitString.eth_creditCardType == ETHCreditCardTypeNotACreditCard) {
-		return NO;
-	}
-	
-	NSInteger verification = [NSString eth_luhnAlgorithm:digitString];
-	NSRange range = {.location = digitString.length - 1, .length = 1};
-	unichar verificationChar;
-	[digitString getCharacters:&verificationChar range:range];
-	
-	return [NSString eth_unicharToDigit:verificationChar] == verification;
+  NSString * digitString = [self eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  if(digitString.eth_creditCardType == ETHCreditCardTypeNotACreditCard) {
+    return NO;
+  }
+  
+  NSInteger verification = [NSString eth_luhnAlgorithm:digitString];
+  NSRange range = {.location = digitString.length - 1, .length = 1};
+  unichar verificationChar;
+  [digitString getCharacters:&verificationChar range:range];
+  
+  return [NSString eth_unicharToDigit:verificationChar] == verification;
 }
 
 - (BOOL)eth_isValidCardVerificationCode {

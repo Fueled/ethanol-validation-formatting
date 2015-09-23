@@ -93,13 +93,13 @@ GENERATE_FORMATTER_TESTS(testCreditCardExpirationDateDefaultNumberFormatterCurso
 }
 
 - (void)testNonDestructiveCreditCardNumberUnformat {
-	NSString * testString = @"definitely not a credit card number";
-	XCTAssertEqualObjects([[ETHCreditCardNumberFormatter formatter] unformatString:testString], testString);
+  NSString * testString = @"definitely not a credit card number";
+  XCTAssertEqualObjects([[ETHCreditCardNumberFormatter formatter] unformatString:testString], testString);
 }
 
 - (void)testNonDestructiveCreditCardExpiratinDateUnformat {
-	NSString * testString = @"definitely not a credit card expiration/date";
-	XCTAssertEqualObjects([[ETHCreditCardExpirationDateFormatter formatter] unformatString:testString], testString);
+  NSString * testString = @"definitely not a credit card expiration/date";
+  XCTAssertEqualObjects([[ETHCreditCardExpirationDateFormatter formatter] unformatString:testString], testString);
 }
 
 @end

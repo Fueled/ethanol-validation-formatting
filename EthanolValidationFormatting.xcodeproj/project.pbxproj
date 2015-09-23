@@ -48,35 +48,35 @@
 
 /* Begin PBXFileReference section */
 		F47358441B443D00007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F47358471B443D00007688EC /* EthanolValidationFormatting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EthanolValidationFormatting.h; sourceTree = "<group>"; };
+		F47358471B443D00007688EC /* EthanolValidationFormatting.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = EthanolValidationFormatting.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F47358491B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F473584E1B443D00007688EC /* EthanolValidationFormattingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolValidationFormattingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F47358531B443D00007688EC /* FormattersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormattersTests.m; sourceTree = "<group>"; };
+		F47358531B443D00007688EC /* FormattersTests.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = FormattersTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F47358551B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardExpirationDateFormatter.h; sourceTree = "<group>"; };
-		F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardExpirationDateFormatter.m; sourceTree = "<group>"; };
-		F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardNumberFormatter.h; sourceTree = "<group>"; };
-		F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardNumberFormatter.m; sourceTree = "<group>"; };
-		F47358621B443D67007688EC /* ETHFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHFormatter.h; sourceTree = "<group>"; };
-		F47358631B443D67007688EC /* ETHFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHFormatter.m; sourceTree = "<group>"; };
-		F47358641B443D67007688EC /* ETHUSAStateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHUSAStateValidator.h; sourceTree = "<group>"; };
-		F47358651B443D67007688EC /* ETHUSAStateValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHUSAStateValidator.m; sourceTree = "<group>"; };
-		F47358661B443D67007688EC /* ETHValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHValidator.h; sourceTree = "<group>"; };
-		F47358671B443D67007688EC /* ETHValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHValidator.m; sourceTree = "<group>"; };
-		F47358681B443D67007688EC /* NSString+EthanolValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EthanolValidation.h"; sourceTree = "<group>"; };
-		F47358691B443D67007688EC /* NSString+EthanolValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EthanolValidation.m"; sourceTree = "<group>"; };
-		F47358A01B443F13007688EC /* NSString+CreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CreditCard.h"; sourceTree = "<group>"; };
-		F47358A11B443F13007688EC /* NSString+CreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CreditCard.m"; sourceTree = "<group>"; };
-		F47358A41B443F8C007688EC /* ETHNonemptyValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHNonemptyValidator.h; sourceTree = "<group>"; };
-		F47358A51B443F8C007688EC /* ETHNonemptyValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHNonemptyValidator.m; sourceTree = "<group>"; };
-		F47359781B45BEF0007688EC /* ETHBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHBlockValidator.h; sourceTree = "<group>"; };
-		F47359791B45BEF0007688EC /* ETHBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHBlockValidator.m; sourceTree = "<group>"; };
-		F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHSelectorValidator.h; sourceTree = "<group>"; };
-		F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHSelectorValidator.m; sourceTree = "<group>"; };
+		F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardExpirationDateFormatter.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardExpirationDateFormatter.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHCreditCardNumberFormatter.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHCreditCardNumberFormatter.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358621B443D67007688EC /* ETHFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHFormatter.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358631B443D67007688EC /* ETHFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHFormatter.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358641B443D67007688EC /* ETHUSAStateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHUSAStateValidator.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358651B443D67007688EC /* ETHUSAStateValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHUSAStateValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358661B443D67007688EC /* ETHValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHValidator.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358671B443D67007688EC /* ETHValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358681B443D67007688EC /* NSString+EthanolValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = "NSString+EthanolValidation.h"; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358691B443D67007688EC /* NSString+EthanolValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = "NSString+EthanolValidation.m"; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358A01B443F13007688EC /* NSString+CreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = "NSString+CreditCard.h"; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358A11B443F13007688EC /* NSString+CreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = "NSString+CreditCard.m"; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358A41B443F8C007688EC /* ETHNonemptyValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHNonemptyValidator.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47358A51B443F8C007688EC /* ETHNonemptyValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHNonemptyValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47359781B45BEF0007688EC /* ETHBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHBlockValidator.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F47359791B45BEF0007688EC /* ETHBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHBlockValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHSelectorValidator.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHSelectorValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F4C2754F1B83AE4A00838B17 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4C275601B83CD9400838B17 /* CreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardTests.m; sourceTree = "<group>"; };
-		F4C275631B83D99100838B17 /* ValidatorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorsTests.m; sourceTree = "<group>"; };
-		F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringValidationTests.m; sourceTree = "<group>"; };
+		F4C275601B83CD9400838B17 /* CreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = CreditCardTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F4C275631B83D99100838B17 /* ValidatorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ValidatorsTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = NSStringValidationTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

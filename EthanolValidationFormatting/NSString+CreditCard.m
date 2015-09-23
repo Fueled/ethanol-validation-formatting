@@ -18,7 +18,7 @@
   if(characters.count != 1 || formattedString.length < 9 || formattedString.length > 19) {
     return ETHCreditCardTypeNotACreditCard;
   }
-	
+  
   ETHCreditCardType cardType[] = {ETHCreditCardTypeAmex, ETHCreditCardTypeVisa, ETHCreditCardTypeMastercard, ETHCreditCardTypeDiscover};
   for(size_t i = 0;i < sizeof(cardType) / sizeof(*cardType);++i) {
     NSPredicate *predicate = [self predicateForType:cardType[i]];

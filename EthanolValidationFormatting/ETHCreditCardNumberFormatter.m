@@ -71,11 +71,11 @@ enum {
 }
 
 - (id)unformatString:(NSString *)formattedString preserveCursor:(NSInteger *)cursor {
-	if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardNumber) error:nil] validateObject:formattedString error:nil]) {
-		return [formattedString eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]
-																						preserveCursor:cursor];
-	}
-	return formattedString;
+  if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardNumber) error:nil] validateObject:formattedString error:nil]) {
+    return [formattedString eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]
+                                            preserveCursor:cursor];
+  }
+  return formattedString;
 }
 
 @end
