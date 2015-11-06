@@ -14,16 +14,16 @@ FOUNDATION_EXPORT double EthanolValidationFormattingVersionNumber;
 //! Project version string for EthanolValidationFormatting.
 FOUNDATION_EXPORT const unsigned char EthanolValidationFormattingVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <EthanolValidationFormatting/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import "PublicHeader.h"
 
 
-#import <EthanolValidationFormatting/ETHCreditCardExpirationDateFormatter.h>
-#import <EthanolValidationFormatting/ETHCreditCardNumberFormatter.h>
-#import <EthanolValidationFormatting/ETHFormatter.h>
-#import <EthanolValidationFormatting/ETHBlockValidator.h>
-#import <EthanolValidationFormatting/ETHSelectorValidator.h>
-#import <EthanolValidationFormatting/ETHNonEmptyValidator.h>
-#import <EthanolValidationFormatting/ETHUSAStateValidator.h>
-#import <EthanolValidationFormatting/ETHValidator.h>
-#import <EthanolValidationFormatting/NSString+EthanolValidation.h>
-#import <EthanolValidationFormatting/NSString+CreditCard.h>
+#import "ETHCreditCardExpirationDateFormatter.h"
+#import "ETHCreditCardNumberFormatter.h"
+#import "ETHFormatter.h"
+#import "ETHBlockValidator.h"
+#import "ETHSelectorValidator.h"
+#import "ETHNonEmptyValidator.h"
+#import "ETHUSAStateValidator.h"
+#import "ETHValidator.h"
+#import "NSString+EthanolValidation.h"
+#import "NSString+CreditCard.h"
