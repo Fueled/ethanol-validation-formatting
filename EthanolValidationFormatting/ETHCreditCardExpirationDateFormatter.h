@@ -10,4 +10,6 @@
 
 @interface ETHCreditCardExpirationDateFormatter : ETHFormatter
 
+@property (nonatomic, assign) BOOL asYouTypeFormatter;
+
 @end

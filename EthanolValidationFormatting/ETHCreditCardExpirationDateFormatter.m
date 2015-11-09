@@ -46,7 +46,7 @@ static NSInteger const kSeparatorCharacterRank = 2;
 }
 
 - (id)unformatString:(NSString *)formattedString preserveCursor:(NSInteger *)cursor {
-  if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardExpirationDate) error:nil] validateObject:formattedString error:nil]) {
+  if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardExpirationDate) error:nil] validateObject:formattedString error:nil] || self.asYouTypeFormatter) {
     return [formattedString eth_stringByRemovingCharacters:({ NSMutableCharacterSet * set = [NSMutableCharacterSet whitespaceAndNewlineCharacterSet]; [set formUnionWithCharacterSet: [NSCharacterSet characterSetWithCharactersInString:kSeparatorCharacter]]; set; })
                                             preserveCursor:cursor];
   }

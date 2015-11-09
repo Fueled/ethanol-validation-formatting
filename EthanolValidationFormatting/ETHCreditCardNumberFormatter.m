@@ -32,6 +32,8 @@ enum {
     [object getCharacters:buffer range:range];
     NSMutableString *result = [NSMutableString string];
     
+    *cursor += characterOffset;
+    
     switch ([object eth_creditCardType]) {
         // masking and length is different for the amex type.
       case ETHCreditCardTypeAmex:
@@ -42,13 +44,14 @@ enum {
           
           [result appendString:[NSString stringWithCharacters:buffer + i length:1]];
         }
-        *cursor += characterOffset;
         *cursor += (*cursor > 4) ? 1 : 0;
         *cursor += (*cursor > 10) ? 1 : 0;
         break;
       case ETHCreditCardTypeNotACreditCard:
-        result = object;
-        break;
+        if (!self.asYouTypeFormatter) {
+          result = object;
+          break;
+        }
       default:
         for (NSUInteger i = 0; i < length; ++i) {
           if (i > 0 && (i % 4) == 0 && i < ETHCreditCardNumberDefaultLength) {
@@ -58,11 +61,9 @@ enum {
           [result appendString:[NSString stringWithCharacters:buffer + i length:1]];
         }
         
-        *cursor += characterOffset;
         *cursor += (MIN(*cursor, ETHCreditCardNumberDefaultLength) - 1) / 4;
         break;
     };
-    
     
     return result;
   }
@@ -71,7 +72,7 @@ enum {
 }
 
 - (id)unformatString:(NSString *)formattedString preserveCursor:(NSInteger *)cursor {
-  if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardNumber) error:nil] validateObject:formattedString error:nil]) {
+  if([[ETHSelectorValidator validatorWithSelector:@selector(eth_isValidCreditCardNumber) error:nil] validateObject:formattedString error:nil] || self.asYouTypeFormatter) {
     return [formattedString eth_stringByRemovingCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]
                                             preserveCursor:cursor];
   }

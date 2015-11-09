@@ -10,4 +10,6 @@
 
 @interface ETHCreditCardNumberFormatter : ETHFormatter
 
+@property (nonatomic, assign) BOOL asYouTypeFormatter;
+
 @end
