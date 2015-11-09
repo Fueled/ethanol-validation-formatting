@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Fueled. All rights reserved.
 //
 
-#import <EthanolValidationFormatting/ETHFormatter.h>
+#import "ETHFormatter.h"
 
 @interface ETHCreditCardNumberFormatter : ETHFormatter
 

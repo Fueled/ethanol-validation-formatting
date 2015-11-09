@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Fueled. All rights reserved.
 //
 
-#import <EthanolValidationFormatting/ETHNonEmptyValidator.h>
+#import "ETHNonemptyValidator.h"
 
 @interface ETHUSAStateValidator : ETHNonemptyValidator
 

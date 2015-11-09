@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Fueled. All rights reserved.
 //
 
-#import <EthanolValidationFormatting/ETHValidator.h>
+#import "ETHValidator.h"
 
 /**
  *  A subclass of ETHValidator that allows to specify a selector and a target as a validation method.
