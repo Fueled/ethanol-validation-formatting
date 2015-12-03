@@ -20,7 +20,7 @@
 }
 
 - (NSString *)formatObject:(id)object {
-  NSInteger temp;
+  NSInteger temp = 0;
   return [self formatObject:object preserveCursor:&temp changeInCharacterOffset:0];
 }
 
@@ -29,7 +29,7 @@
 }
 
 - (id)unformatString:(NSString *)formattedString {
-  NSInteger temp;
+  NSInteger temp = 0;
   return [self unformatString:formattedString preserveCursor:&temp];
 }
 
