@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ETHValidatorErrorCode 1213
 
 /**
@@ -22,6 +24,8 @@
  */
 + (instancetype)validator;
 
-- (BOOL)validateObject:(id)object error:(NSError **)error;
+- (BOOL)validateObject:(id)object error:(NSError * _Nullable * _Nullable)error __attribute__((swift_error(none)));
 
 @end
+
+NS_ASSUME_NONNULL_END

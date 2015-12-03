@@ -8,7 +8,11 @@
 
 #import "ETHValidator.h"
 
-typedef BOOL (^ ETHValidationBlockType)(id object, NSString ** errorMessage);
+NS_ASSUME_NONNULL_BEGIN
+
+@class ETHBlockValidator;
+
+typedef BOOL (^ ETHValidationBlockType)(ETHBlockValidator * validator, _Nullable id object, NSString * _Nullable * _Nonnull errorMessage);
 
 /**
  *  A subclass of ETHValidator that allows to specify a block as a validation method.
@@ -24,6 +28,8 @@ typedef BOOL (^ ETHValidationBlockType)(id object, NSString ** errorMessage);
  */
 + (instancetype)validatorWithBlock:(ETHValidationBlockType)validationBlock;
 
-- (instancetype)initWithBlock:(ETHValidationBlockType)validationBlock;
+- (instancetype)initWithBlock:(ETHValidationBlockType)validationBlock NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

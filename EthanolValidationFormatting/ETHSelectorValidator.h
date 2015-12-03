@@ -8,6 +8,8 @@
 
 #import "ETHValidator.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  A subclass of ETHValidator that allows to specify a selector and a target as a validation method.
  */
@@ -23,7 +25,7 @@
  *
  *  @return A new instance of ETHObjectValidator
  */
-+ (instancetype)validatorWithSelector:(SEL)selector error:(NSString *)error;
++ (instancetype)validatorWithSelector:(SEL)selector error:(NSString * _Nullable)error;
 
 /**
  *  Create a new ETHSelectorValidator with a specified selector, target and error message.
@@ -36,7 +38,7 @@
  *
  *  @return A new instance of ETHObjectValidator
  */
-+ (instancetype)validatorWithSelector:(SEL)selector target:(id)target error:(NSString *)error;
++ (instancetype)validatorWithSelector:(SEL)selector target:(id)target error:(NSString * _Nullable)error;
 
 /**
  *  Initialize the instance with a specified selector, target and error message.
@@ -48,7 +50,7 @@
  *
  *  @return A new instance of ETHObjectValidator
  */
-- (instancetype)initWithSelector:(SEL)selector error:(NSString *)error;
+- (instancetype)initWithSelector:(SEL)selector error:(NSString * _Nullable)error;
 
 /**
  *  Initialize the instance with a specified selector, target and error message.
@@ -61,6 +63,8 @@
  *
  *  @return A new instance of ETHObjectValidator
  */
-- (instancetype)initWithSelector:(SEL)selector target:(id)target error:(NSString *)error;
+- (instancetype)initWithSelector:(SEL)selector target:(nullable id)target error:(NSString * _Nullable)error NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

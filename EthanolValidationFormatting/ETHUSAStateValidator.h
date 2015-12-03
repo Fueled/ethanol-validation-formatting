@@ -8,6 +8,8 @@
 
 #import "ETHNonemptyValidator.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ETHUSAStateValidator : ETHNonemptyValidator
 
 /**
@@ -18,3 +20,5 @@
 + (NSArray *)USAStatesList;
 
 @end
+
+NS_ASSUME_NONNULL_END

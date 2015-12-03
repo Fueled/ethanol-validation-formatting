@@ -21,16 +21,22 @@
 }
 
 - (instancetype)initWithBlock:(ETHValidationBlockType)validationBlock {
-  self = [self init];
+  self = [super init];
   if(self != nil) {
     _validationBlock = validationBlock;
   }
   return self;
 }
 
+- (instancetype)init {
+  return [self initWithBlock:^BOOL(ETHBlockValidator * validator, id object, NSString ** errorMessage) {
+    return false;
+  }];
+}
+
 - (BOOL)validateObject:(id)object error:(NSError **)error {
   NSString * errorMessage;
-  if(!self.validationBlock(object, &errorMessage)) {
+  if(!self.validationBlock(self, object, &errorMessage)) {
     if(error != nil) {
       *error = [NSError errorWithDomain:@"com.Ethanol.ValidationFormatting"
                                    code:ETHValidatorErrorCode
