@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0C6F9E251CAEC6F9004A76FD /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6F9E231CAEC6F9004A76FD /* EthanolUtilities.framework */; };
 		0C6F9E261CAEC6F9004A76FD /* libPhoneNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6F9E241CAEC6F9004A76FD /* libPhoneNumber.framework */; };
+		0CBFE8F81CAEC31B008FA49A /* ETHPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBFE8F61CAEC31B008FA49A /* ETHPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CBFE8F91CAEC31B008FA49A /* ETHPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFE8F71CAEC31B008FA49A /* ETHPhoneNumberFormatter.m */; };
 		F473584F1B443D00007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47358441B443D00007688EC /* EthanolValidationFormatting.framework */; };
 		F47358541B443D00007688EC /* FormattersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358531B443D00007688EC /* FormattersTests.m */; };
 		F473586A1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		0C6F9E231CAEC6F9004A76FD /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C6F9E241CAEC6F9004A76FD /* libPhoneNumber.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumber.framework; path = libPhoneNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBFE8F61CAEC31B008FA49A /* ETHPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		0CBFE8F71CAEC31B008FA49A /* ETHPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHPhoneNumberFormatter.m; sourceTree = "<group>"; };
 		F47358441B443D00007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47358471B443D00007688EC /* EthanolValidationFormatting.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = EthanolValidationFormatting.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F47358491B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */,
 				F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */,
 				F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */,
+				0CBFE8F61CAEC31B008FA49A /* ETHPhoneNumberFormatter.h */,
+				0CBFE8F71CAEC31B008FA49A /* ETHPhoneNumberFormatter.m */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				F47358741B443D67007688EC /* NSString+EthanolValidation.h in Headers */,
 				F473586C1B443D67007688EC /* ETHCreditCardNumberFormatter.h in Headers */,
 				F473586A1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h in Headers */,
+				0CBFE8F81CAEC31B008FA49A /* ETHPhoneNumberFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47358A31B443F13007688EC /* NSString+CreditCard.m in Sources */,
+				0CBFE8F91CAEC31B008FA49A /* ETHPhoneNumberFormatter.m in Sources */,
 				F47358751B443D67007688EC /* NSString+EthanolValidation.m in Sources */,
 				F473597B1B45BEF0007688EC /* ETHBlockValidator.m in Sources */,
 				F47358A71B443F8C007688EC /* ETHNonemptyValidator.m in Sources */,
