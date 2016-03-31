@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Carthage/Checkouts/ethanol-utilities/EthanolUtilities.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ethanol-utilities/../libPhoneNumber-iOS/libPhoneNumber.xcodeproj">
+   </FileRef>
 </Workspace>
