@@ -25,5 +25,6 @@ FOUNDATION_EXPORT const unsigned char EthanolValidationFormattingVersionString[]
 #import "ETHNonEmptyValidator.h"
 #import "ETHUSAStateValidator.h"
 #import "ETHValidator.h"
+#import "ETHCompoundValidator.h"
 #import "NSString+EthanolValidation.h"
 #import "NSString+CreditCard.h"
