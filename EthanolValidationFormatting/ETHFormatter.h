@@ -3,7 +3,25 @@
 //  Ethanol
 //
 //  Created by Stéphane Copin on 2/14/14.
-//  Copyright (c) 2014 Fueled. All rights reserved.
+//  Copyright (c) 2014 Fueled Digital Media, LLC.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import <Foundation/Foundation.h>
@@ -32,19 +50,6 @@
  *  @return The formatted object as a NSString.
  */
 - (NSString *)formatObject:(id)object;
-
-/**
- *  Format the given object to a NSString * representation, while preserving cursor position if cursor is not NULL.
- *  This method, if a cursor is given, will move the cursor adequately whether it's a delete operation or not (Specified by deleting)
- *  @note This is the same as calling [self formatObject:object preserveCursor:cursor changeInCharacterOffset:deleting ? -1 : 1]
- *
- *  @param object   The object to format to a NSString.
- *  @param cursor   A pointer to a NSInteger containing the current cursor position. This parameter must not be NULL.
- *  @param deleting A BOOL specifying whether or not the formatting operation is done because of deleting a character or not.
- *
- *  @return The formatted object as a NSString.
- */
-- (NSString *)formatObject:(id)object preserveCursor:(NSInteger *)cursor deleting:(BOOL)deleting __deprecated_msg("Please use formatObject:preserveCursor:changeInCharacterOffset instead.");
 
 /**
  *  Format the given object to a NSString * representation, while preserving cursor position if cursor is not NULL.

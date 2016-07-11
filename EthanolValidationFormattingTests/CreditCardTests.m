@@ -1,8 +1,8 @@
 //
-//  ETHCreditCardExpirationDateFormatter.h
-//  Ethanol
+//  CreditCardTests.m
+//  EthanolValidationFormatting
 //
-//  Created by Bastien Falcou on 1/6/15.
+//  Created by Stephane Copin on 8/18/15.
 //  Copyright (c) 2015 Fueled Digital Media, LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,10 +24,26 @@
 //  THE SOFTWARE.
 //
 
-#import "ETHFormatter.h"
+#import <XCTest/XCTest.h>
 
-@interface ETHCreditCardExpirationDateFormatter : ETHFormatter
+#import "NSString+CreditCard.h"
 
-@property (nonatomic, assign) BOOL asYouTypeFormatter;
+@interface CreditCardTests : XCTestCase
+
+@end
+
+@implementation CreditCardTests
+
+#define GENERATE_CREDIT_CARD_NUMBER_TEST(testName, cardNumber, type) \
+  - (void)test ## testName ## CreditCardNumber { \
+    XCTAssertEqual((cardNumber).eth_creditCardType, type); \
+  }
+
+GENERATE_CREDIT_CARD_NUMBER_TEST(Unknown, @"3530111333300000", ETHCreditCardTypeUnknown)
+GENERATE_CREDIT_CARD_NUMBER_TEST(Visa, @"4111111111111111", ETHCreditCardTypeVisa)
+GENERATE_CREDIT_CARD_NUMBER_TEST(Mastercard, @"5555555555554444", ETHCreditCardTypeMastercard)
+GENERATE_CREDIT_CARD_NUMBER_TEST(Amex, @"371449635398431", ETHCreditCardTypeAmex)
+GENERATE_CREDIT_CARD_NUMBER_TEST(Discover, @"6011111111111117", ETHCreditCardTypeDiscover)
+GENERATE_CREDIT_CARD_NUMBER_TEST(NotA, @"abc", ETHCreditCardTypeNotACreditCard)
 
 @end
