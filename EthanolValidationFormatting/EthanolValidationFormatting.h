@@ -37,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char EthanolValidationFormattingVersionString[]
 
 #import "ETHCreditCardExpirationDateFormatter.h"
 #import "ETHCreditCardNumberFormatter.h"
+#import "ETHPhoneNumberFormatter.h"
 #import "ETHFormatter.h"
 #import "ETHBlockValidator.h"
 #import "ETHSelectorValidator.h"
