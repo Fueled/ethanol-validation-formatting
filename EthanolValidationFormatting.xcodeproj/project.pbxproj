@@ -41,6 +41,8 @@
 		F4C275611B83CD9400838B17 /* CreditCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275601B83CD9400838B17 /* CreditCardTests.m */; };
 		F4C275641B83D99100838B17 /* ValidatorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275631B83D99100838B17 /* ValidatorsTests.m */; };
 		F4C275661B83DD1E00838B17 /* NSStringValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */; };
+		F4ECDB741D345A7B001F2514 /* ETHPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F4ECDB721D345A7B001F2514 /* ETHPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4ECDB751D345A7B001F2514 /* ETHPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECDB731D345A7B001F2514 /* ETHPhoneNumberFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +89,12 @@
 		F47359791B45BEF0007688EC /* ETHBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHBlockValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F473597C1B45BEFB007688EC /* ETHSelectorValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = ETHSelectorValidator.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F473597D1B45BEFB007688EC /* ETHSelectorValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ETHSelectorValidator.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
-		F4BD229F1D33FA6100FD302D /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BD229F1D33FA6100FD302D /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C275601B83CD9400838B17 /* CreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = CreditCardTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F4C275631B83D99100838B17 /* ValidatorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ValidatorsTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F4C275651B83DD1E00838B17 /* NSStringValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = NSStringValidationTests.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		F4ECDB721D345A7B001F2514 /* ETHPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		F4ECDB731D345A7B001F2514 /* ETHPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHPhoneNumberFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				F473585F1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.m */,
 				F47358601B443D67007688EC /* ETHCreditCardNumberFormatter.h */,
 				F47358611B443D67007688EC /* ETHCreditCardNumberFormatter.m */,
+				F4ECDB721D345A7B001F2514 /* ETHPhoneNumberFormatter.h */,
+				F4ECDB731D345A7B001F2514 /* ETHPhoneNumberFormatter.m */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			files = (
 				0C33EEED1CADCE2E005A9409 /* NSString+EthanolValidationPhone.h in Headers */,
 				F47358B81B444714007688EC /* EthanolValidationFormatting.h in Headers */,
+				F4ECDB741D345A7B001F2514 /* ETHPhoneNumberFormatter.h in Headers */,
 				0C33EEE51CADCDCE005A9409 /* ETHPhoneNumberValidator.h in Headers */,
 				F473597A1B45BEF0007688EC /* ETHBlockValidator.h in Headers */,
 				F47358A61B443F8C007688EC /* ETHNonemptyValidator.h in Headers */,
@@ -335,6 +342,7 @@
 			files = (
 				F47358A31B443F13007688EC /* NSString+CreditCard.m in Sources */,
 				F47358751B443D67007688EC /* NSString+EthanolValidation.m in Sources */,
+				F4ECDB751D345A7B001F2514 /* ETHPhoneNumberFormatter.m in Sources */,
 				F473597B1B45BEF0007688EC /* ETHBlockValidator.m in Sources */,
 				F47358A71B443F8C007688EC /* ETHNonemptyValidator.m in Sources */,
 				0C33EEE61CADCDCE005A9409 /* ETHPhoneNumberValidator.m in Sources */,
