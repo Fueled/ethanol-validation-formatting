@@ -14,6 +14,7 @@
 		0C33EF251CADD086005A9409 /* libPhoneNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C33EF241CADD086005A9409 /* libPhoneNumber.framework */; };
 		0C7CD3F71CAF143400946420 /* ETHCompoundValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CD3F51CAF143400946420 /* ETHCompoundValidator.m */; };
 		0C7CD3F81CAF143400946420 /* ETHCompoundValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7CD3F61CAF143400946420 /* ETHCompoundValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779418961DAD9DAB00BC7BF5 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 779418951DAD9DAB00BC7BF5 /* Cartfile */; };
 		F473584F1B443D00007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47358441B443D00007688EC /* EthanolValidationFormatting.framework */; };
 		F47358541B443D00007688EC /* FormattersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47358531B443D00007688EC /* FormattersTests.m */; };
 		F473586A1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F473585E1B443D67007688EC /* ETHCreditCardExpirationDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 		0C33EF241CADD086005A9409 /* libPhoneNumber.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libPhoneNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7CD3F51CAF143400946420 /* ETHCompoundValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHCompoundValidator.m; sourceTree = "<group>"; };
 		0C7CD3F61CAF143400946420 /* ETHCompoundValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHCompoundValidator.h; sourceTree = "<group>"; };
+		779418951DAD9DAB00BC7BF5 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		F47358441B443D00007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47358471B443D00007688EC /* EthanolValidationFormatting.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = EthanolValidationFormatting.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F47358491B443D00007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				F473589C1B443EC5007688EC /* Formatters */,
 				F473589E1B443ED8007688EC /* Validators */,
 				F473589F1B443EDC007688EC /* NSStringHelpers */,
+				779418951DAD9DAB00BC7BF5 /* Cartfile */,
 				F47358491B443D00007688EC /* Info.plist */,
 			);
 			path = EthanolValidationFormatting;
@@ -326,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779418961DAD9DAB00BC7BF5 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
