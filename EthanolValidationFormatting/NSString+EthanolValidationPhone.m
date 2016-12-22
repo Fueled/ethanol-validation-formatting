@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Fueled. All rights reserved.
 //
 
-#import <libPhoneNumber/NBPhoneNumberUtil.h>
-#import <libPhoneNumber/NBPhoneNumber.h>
 #import "NSString+EthanolValidationPhone.h"
+
+@import libPhoneNumberiOS;
 
 @implementation NSString (EthanolValidationPhone)
 
