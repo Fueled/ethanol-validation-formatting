@@ -42,7 +42,8 @@ static NSString * const kEmailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za
 }
 
 - (BOOL)eth_isNonempty {
-  return self.length != 0;
+  NSString *characterString = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  return characterString.length != 0;
 }
 
 - (BOOL)eth_isAlphabetic {
