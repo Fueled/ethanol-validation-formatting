@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIWebView.h>
-#import <libPhoneNumber/NBAsYouTypeFormatter.h>
 #import "ETHPhoneNumberFormatter.h"
 
 @import EthanolUtilities;
+@import libPhoneNumberiOS;
 
 @implementation ETHPhoneNumberFormatter
 
